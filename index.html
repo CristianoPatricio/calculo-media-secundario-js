@@ -37,9 +37,15 @@
         margin: 0 auto;
     }
 
-    #button {
-        text-align: center;
+    #buttonsContent {
+        text-align: right;
+        width: 80%;
+        position: relative;
         margin: 0 auto;
+    }
+
+    .button {
+        display: inline-block;
     }
 
     button {
@@ -91,17 +97,17 @@
                     <tr>
                         <th scope="row">Português</th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-pt">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-pt">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-pt">
                             </div>
                         </td>
@@ -115,12 +121,12 @@
                     <tr>
                         <th scope="row">Filosofia</th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-fil">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-fil">
                             </div>
                         </td>
@@ -143,12 +149,12 @@
                     <tr>
                         <th scope="row">L. Estrangeira</th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-le">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-le">
                             </div>
                         </td>
@@ -171,17 +177,17 @@
                     <tr>
                         <th scope="row">Matemática</th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-mat">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-mat">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-mat">
                             </div>
                         </td>
@@ -195,17 +201,17 @@
                     <tr>
                         <th scope="row">E. Física</th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-ef">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-ef">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-ef">
                             </div>
                         </td>
@@ -214,7 +220,7 @@
                     <tr>
                         <th scope="row">
                             <div class="col-10">
-                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectListBienal1">
                                     <option selected>Bienal 1...</option>
                                     <option value="1">Física e Química A</option>
                                     <option value="2">Biologia e Geologia</option>
@@ -223,12 +229,12 @@
                             </div>
                         </th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal1">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal1">
                             </div>
                         </td>
@@ -251,7 +257,7 @@
                     <tr>
                         <th scope="row">
                             <div class="col-10">
-                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectListBienal2">
                                     <option selected>Bienal 2...</option>
                                     <option value="1">Física e Química A</option>
                                     <option value="2">Biologia e Geologia</option>
@@ -260,12 +266,12 @@
                             </div>
                         </th>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal2">
                             </div>
                         </td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal2">
                             </div>
                         </td>
@@ -288,7 +294,7 @@
                     <tr>
                         <th scope="row">
                             <div class="col-10">
-                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectListOpt1">
                                     <option selected>Opção 1...</option>
                                     <option value="1">Biologia</option>
                                     <option value="2">Física</option>
@@ -301,7 +307,7 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-op1">
                             </div>
                         </td>
@@ -310,7 +316,7 @@
                     <tr>
                         <th scope="row">
                             <div class="col-10">
-                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="selectListOpt2">
                                     <option selected>Opção 2...</option>
                                     <option value="1">Aplicações Informáticas B</option>
                                     <option value="2">Física</option>
@@ -330,7 +336,7 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <input class="form-control" type="number" value="0" min="0" max="20" id="nota-op2">
                             </div>
                         </td>
@@ -341,10 +347,17 @@
         </div>
     </main>
     <br>
-    <div id="button">
-        <!--Botão-->
-        <button id="btnCalcular" type="button" class="btn btn-lg" data-toggle="modal"
-            data-target="#myModal"><i class="fa fa-calculator fa-lg"></i> Calcular</button>
+    <div id="buttonsContent">
+        <div class="button">
+            <!--Botão-->
+            <button id="btnCalcular" type="button" class="btn btn-lg" data-toggle="modal"
+                data-target="#myModal"><i class="fa fa-calculator fa-lg"></i> Calcular</button>
+        </div>
+        <div class="button">
+            <!--Botão-->
+            <button id="btnLimpar" type="button" class="btn btn-lg" >
+                <i class="fa fa-remove fa-lg"></i> Limpar campos</button>
+        </div>
     </div>
 
     <!-- The Modal -->
@@ -372,7 +385,7 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
                 </div>
 
             </div>
@@ -392,9 +405,9 @@
         showInputNumberExam("nota-exame-bienal1", "checkBtn3");
         showInputNumberExam("nota-exame-bienal2", "checkBtn4");
 
+        // Ação Botão Calcular
         var $btnCalcular = document.querySelector("#btnCalcular");
 
-        // Ação Botão Calcular
         $btnCalcular.addEventListener('click', function () {
             var $spanMediaFinal = document.querySelector("#mediaFinal");
             var $spanNotaCandidatura = document.querySelector("#notaCandidatura");
@@ -407,6 +420,13 @@
             $spanNotaCandidatura.textContent = notaCandidatura;
         });
 
+        // Ação Botão Limpar
+        var $btnLimpar = document.querySelector("#btnLimpar");
+
+        $btnLimpar.addEventListener('click', function(){
+            limpaCampos();
+        });
+     
         /**
          * @param {array} arr : array com as notas 
          * @return média
@@ -532,6 +552,36 @@
             return notaFinal;
 
         }
+
+        /**
+         * Todos os campos adquirem o estado inicial
+         */
+        function limpaCampos(){
+            var $inputs = document.querySelectorAll(".form-control");
+
+            // Reset input numbers
+            $inputs.forEach(function(input){
+                input.value = 0;
+            });
+
+            // Reset select lists
+            document.querySelector("#selectListBienal1").selectedIndex = 0;
+            document.querySelector("#selectListBienal2").selectedIndex = 0;
+            document.querySelector("#selectListOpt1").selectedIndex = 0;
+            document.querySelector("#selectListOpt2").selectedIndex = 0;
+
+            // uncheck buttons
+            for (var $i = 1; $i <= 4; $i++){
+                document.querySelector("#checkBtn"+$i).checked = false;
+            }
+
+            // Reset prop readonly 
+            document.querySelector("#nota-exame-fil").readOnly = true;
+            document.querySelector("#nota-exame-le").readOnly = true;
+            document.querySelector("#nota-exame-bienal1").readOnly = true;
+            document.querySelector("#nota-exame-bienal2").readOnly = true;
+        }
+
     </script>
 </body>
 
