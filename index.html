@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora Média Final Secundário</title>
+    <meta charset="utf-8">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+</head>
+
+<style>
+    .title {
+        font-family: 'Haettenschweiler';
+        color: brown;
+        text-align: center;
+    }
+
+    .tabelaNotas {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #styleTable {
+        margin: 0 auto;
+        width: 80%;
+        border: 2px solid rgba(58, 58, 58, 0.774) !important;
+    }
+
+    #infoTitle {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #button {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    button {
+        background-color: brown;
+        color: white;
+    }
+
+    button:hover {
+        background-color: rgba(165, 42, 42, 0.788);
+    }
+
+    th {
+        text-align: center !important; 
+        vertical-align: middle !important;
+    }
+
+    .col-7, .col-8, .col-10 {
+        margin: auto; 
+        vertical-align: middle;
+    }
+
+    td {
+        vertical-align: middle !important;
+    }
+
+</style>
+
+<body>
+    <header>
+        <h1 class="title">CALCULADORA DE MÉDIA</h1>
+    </header>
+    <main>
+        <h2 class="title">Preenche as tuas notas</h2>
+        <h6 id="infoTitle">Notas da Disciplina: (Nota de 0-20)</h6><br>
+        <div id="styleTable">
+            <table class="table table-striped tabelaNotas">
+                <thead>
+                    <tr>
+                        <th scope="col" style="font-size: 20px;">Disciplinas</th>
+                        <th scope="col" style="font-size: 20px;">10º Ano</th>
+                        <th scope="col" style="font-size: 20px;">11º Ano</th>
+                        <th scope="col" style="font-size: 20px;">12º Ano</th>
+                        <th scope="col" style="font-size: 20px;">Exame Nacional <br>
+                            <span style="font-size: 10px;">(Nota de <b>0</b> a <b>200</b>)</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Português</th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-pt">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-pt">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-pt">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-8">
+                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                    id="nota-exame-pt">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Filosofia</th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-fil">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-fil">
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="col-8">
+                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                    id="nota-exame-fil" readonly>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label"></label>
+                                    <input class="form-check-input" type="checkbox" id="checkBtn1" value="option1">
+                                    Exame?
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">L. Estrangeira</th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-le">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-le">
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="col-8">
+                                <input class="form-control" type="number" value="0" min="0" max="200" id="nota-exame-le"
+                                    readonly>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label"></label>
+                                    <input class="form-check-input" type="checkbox" id="checkBtn2" value="option1">
+                                    Exame?
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Matemática</th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-mat">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-mat">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-mat">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-8">
+                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                    id="nota-exame-mat">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">E. Física</th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-ef">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-ef">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-ef">
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="col-10">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <option selected>Bienal 1...</option>
+                                    <option value="1">Física e Química A</option>
+                                    <option value="2">Biologia e Geologia</option>
+                                    <option value="3">Geometria Descritiva A</option>
+                                </select>
+                            </div>
+                        </th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal1">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal1">
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="col-8">
+                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                    id="nota-exame-bienal1" readonly>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label"></label>
+                                    <input class="form-check-input" type="checkbox" id="checkBtn3" value="option1">
+                                    Exame?
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="col-10">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <option selected>Bienal 2...</option>
+                                    <option value="1">Física e Química A</option>
+                                    <option value="2">Biologia e Geologia</option>
+                                    <option value="3">Geometria Descritiva A</option>
+                                </select>
+                            </div>
+                        </th>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal2">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-bienal2">
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="col-8">
+                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                    id="nota-exame-bienal2" readonly>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label"></label>
+                                    <input class="form-check-input" type="checkbox" id="checkBtn4" value="option1">
+                                    Exame?
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="col-10">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <option selected>Opção 1...</option>
+                                    <option value="1">Biologia</option>
+                                    <option value="2">Física</option>
+                                    <option value="3">Química</option>
+                                    <option value="3">Geologia</option>
+                                </select>
+                            </div>
+
+                        </th>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-op1">
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="col-10">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <option selected>Opção 2...</option>
+                                    <option value="1">Aplicações Informáticas B</option>
+                                    <option value="2">Física</option>
+                                    <option value="3">Biologia</option>
+                                    <option value="4">Química</option>
+                                    <option value="5">Geologia</option>
+                                    <option value="6">Psicologia B</option>
+                                    <option value="7">L. Estrangeira I, II ou III</option>
+                                    <option value="8">Economia C</option>
+                                    <option value="9">Geografia C</option>
+                                    <option value="10">Direito</option>
+                                    <option value="11">Ciência Política</option>
+                                    <option value="12">Clássicos da Literatura</option>
+                                </select>
+                            </div>
+                        </th>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="col-7">
+                                <input class="form-control" type="number" value="0" min="0" max="20" id="nota-op2">
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <br>
+    <div id="button">
+        <!--Botão-->
+        <button id="btnCalcular" type="button" class="btn btn-lg" data-toggle="modal"
+            data-target="#myModal"><i class="fa fa-calculator fa-lg"></i> Calcular</button>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Resultado</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    A sua <b>média final</b> é de <span id="mediaFinal"
+                        style="color: brown; font-family: Haettenschweiler; font-size: 40px;"></span> valores!
+                    <hr>
+                    <b>Nota de Candidatura</b><br>
+                    <em>(Licenciatura em Engenharia Informártica - IPG)</em><br>
+                    <center><span id="notaCandidatura"
+                            style="color: brown; font-family: Haettenschweiler; font-size: 40px;"></span> valores!
+                    </center>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <footer style="text-align: center; background-color: rgba(160, 160, 160, 0.815); padding: 10px; margin: auto; font-family: sans-serif;">
+        <i class="fa fa-envelope fa-lg"></i> cristianop.patricio@gmail.com &nbsp; &nbsp; &nbsp; <i class="fa fa-github fa-lg"></i> github.com/CristianoPatricio &nbsp; &nbsp; &nbsp; <i class="fa fa-linkedin fa-lg"></i> Cristiano Patrício  &nbsp; | &nbsp; <b>© 2019 CP</b>  - <em>WS JavaScript @ IPG 2019</em>
+    </footer>
+
+    <script>
+
+        // Ativa ou Desativa campos 'exames'
+        showInputNumberExam("nota-exame-fil", "checkBtn1");
+        showInputNumberExam("nota-exame-le", "checkBtn2");
+        showInputNumberExam("nota-exame-bienal1", "checkBtn3");
+        showInputNumberExam("nota-exame-bienal2", "checkBtn4");
+
+        var $btnCalcular = document.querySelector("#btnCalcular");
+
+        // Ação Botão Calcular
+        $btnCalcular.addEventListener('click', function () {
+            var $spanMediaFinal = document.querySelector("#mediaFinal");
+            var $spanNotaCandidatura = document.querySelector("#notaCandidatura");
+            var notaMatA = document.querySelector("#nota-exame-mat").value;
+
+            var mediaFinal = (calcularMediaFinal()).toFixed(2);
+            var notaCandidatura = ((mediaFinal * 0.65) + ((notaMatA / 10) * 0.35)).toFixed(2);
+
+            $spanMediaFinal.textContent = mediaFinal;
+            $spanNotaCandidatura.textContent = notaCandidatura;
+        });
+
+        /**
+         * @param {array} arr : array com as notas 
+         * @return média
+         */
+        function calcularMedia(arr) {
+            var total = 0;
+            var qtd = arr.length;
+            var x = 0;
+
+            while (arr[x]) {
+                total += arr[x];
+                x++
+            }
+
+            return (total / qtd);
+        }
+
+        /**
+         * @param {string} inputNumber : id do campo inputNumber
+         * @param {string} checkBtn : id do check button
+         * Ativa ou desativa o input number (prop. readonly)
+         */
+        function showInputNumberExam(inputNumber, checkBtn) {
+            var $input = document.querySelector("#" + inputNumber);
+            var $check = document.querySelector("#" + checkBtn);
+
+            $check.addEventListener('change', function () {
+                // Está 'check'?
+                if (this.checked) {
+                    // remove atributo
+                    $input.removeAttribute('readonly');
+                } else {
+                    // adiciona atributo
+                    $input.readOnly = true;
+                }
+            });
+        }
+
+        /**
+         * @return mediaFinal
+         */
+        function calcularMediaFinal() {
+            // Array que guarda as notas finais
+            var arrNotasFinais = new Array();
+
+            // Média final da disciplina de PT
+            var notaFinalPT = getMediaFinalDisciplina("nota-pt", "nota-exame-pt", 0);
+            // Inserir valor no array
+            arrNotasFinais.push(parseFloat(notaFinalPT));
+
+            var notaFinalFIL = getMediaFinalDisciplina("nota-fil", "nota-exame-fil", "checkBtn1");
+            arrNotasFinais.push(parseFloat(notaFinalFIL));
+
+            var notaFinalLE = getMediaFinalDisciplina("nota-le", "nota-exame-le", "checkBtn2");
+            arrNotasFinais.push(parseFloat(notaFinalLE));
+
+            var notaFinalMAT = getMediaFinalDisciplina("nota-mat", "nota-exame-mat", 0);
+            arrNotasFinais.push(parseFloat(notaFinalMAT));
+
+            var notaFinalEF = getMediaFinalDisciplina("nota-ef", 0, 0);
+            arrNotasFinais.push(parseFloat(notaFinalEF));
+
+            var notaFinalBienal1 = getMediaFinalDisciplina("nota-bienal1", "nota-exame-bienal1", "checkBtn3");
+            arrNotasFinais.push(parseFloat(notaFinalBienal1));
+
+            var notaFinalBienal2 = getMediaFinalDisciplina("nota-bienal2", "nota-exame-bienal2", "checkBtn4");
+            arrNotasFinais.push(parseFloat(notaFinalBienal2));
+
+            var notaFinalOpt1 = getMediaFinalDisciplina("nota-op1", 0, 0);
+            arrNotasFinais.push(parseFloat(notaFinalOpt1));
+
+            var notaFinalOpt2 = getMediaFinalDisciplina("nota-op2", 0, 0);
+            arrNotasFinais.push(parseFloat(notaFinalOpt2));
+
+            // Cálculo da média final
+            var mediaFinal = calcularMedia(arrNotasFinais);
+
+            return mediaFinal;
+        }
+
+        /**
+         * @param inputNumber {string} : id do input de dados (CI)
+         * @param inputNumberExam {string} : id do input de dados (Nota Exame)
+         * @param checkBtn {string} : id do checkButton, quando existe
+         * @return notaFinal
+         */ 
+        function getMediaFinalDisciplina(inputNumber, inputNumberExam, checkBtn) {
+            var $notas = document.querySelectorAll("#" + inputNumber);
+            var notaExame = inputNumberExam !== 0 ? document.querySelector("#" + inputNumberExam).value : null;
+            var arrNotas = new Array();
+            var mediaCIF = 0;
+            var notaFinal = 0;
+
+            // Guardar as notas no array arrNotas
+            $notas.forEach(function (notas) {
+                arrNotas.push(parseFloat(notas.value));
+            });
+
+            // Cálculo CIF
+            mediaCIF = calcularMedia(arrNotas);
+            // Debug
+            console.log("Média CIF: " + mediaCIF);
+
+            // Existe um check button associado ao campo da nota do Exame Nacional?
+            if (checkBtn === 0) { //Não
+                // Nota Final = CIF * 0.7 + CE * 0.3
+                notaFinal = notaExame == null ? mediaCIF : (mediaCIF * 0.7) + ((notaExame / 10) * 0.3);
+            } else { //Sim
+                var chkBtn = document.querySelector("#" + checkBtn);
+
+                if (chkBtn.checked === true) {
+                    // Debug
+                    console.log("botão check!");
+                    notaFinal = (mediaCIF * 0.7) + ((notaExame / 10) * 0.3);
+                } else {
+                    notaFinal = mediaCIF;
+                }
+            }
+
+            // Debug
+            console.log("Nota Final: " + notaFinal);
+
+            return notaFinal;
+
+        }
+    </script>
+</body>
+
+</html>
