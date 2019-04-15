@@ -11,6 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1, user-scalable=0" name="viewport">
+	<meta content="width" name="MobileOptimized">
+	<meta content="true" name="HandheldFriendly">
 
 </head>
 
@@ -71,13 +75,38 @@
         vertical-align: middle !important;
     }
 
+    #headerDiv {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+	
+    #logo {
+        float: right;
+        margin-right: 1%;
+    }
+
+	#headerTitle {
+        margin-left: 1%;
+        float: left;
+        text-align: center;
+        vertical-align: middle; 
+	}
+
 </style>
 
-<body>
+<body style="background-color: #F1FAF9;">
     <header>
-        <h1 class="title">CALCULADORA DE MÉDIA</h1>
+        <div id="headerDiv">
+            <div id="logo">
+                <a href="http://www.ipg.pt/estg/ensino_licenciatura.aspx?id=4&curso=Engenharia%20Inform%C3%A1tica" target="_blank"><img alt="Logotipo IPG" src="imgs/logotipo_ipg.png"/></a>
+            </div>
+            <div id="headerTitle">
+                <h1 class="title" style="font-size: 60px;">CALCULADORA DE MÉDIA</h1>
+            </div>
+        </div>
     </header>
     <main>
+        <p></p>
         <h2 class="title">Preenche as tuas notas</h2>
         <h6 id="infoTitle">Notas da Disciplina: (Nota de 0-20)</h6><br>
         <div id="styleTable">
@@ -98,22 +127,22 @@
                         <th scope="row">Português</th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-pt">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-pt">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-pt">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-pt">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-pt">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-pt">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-pt">
                             </div>
                         </td>
@@ -122,12 +151,12 @@
                         <th scope="row">Filosofia</th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-fil">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-fil">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-fil">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-fil">
                             </div>
                         </td>
                         <td>
@@ -135,7 +164,7 @@
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-fil" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
@@ -150,12 +179,12 @@
                         <th scope="row">L. Estrangeira</th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-le">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-le">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-le">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-le">
                             </div>
                         </td>
                         <td>
@@ -163,7 +192,7 @@
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control" type="number" value="0" min="0" max="200" id="nota-exame-le"
+                                <input class="form-control" type="number" value="100" min="0" max="200" id="nota-exame-le"
                                     readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
@@ -178,22 +207,22 @@
                         <th scope="row">Matemática</th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-mat">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-mat">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-mat">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-mat">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-mat">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-mat">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-mat">
                             </div>
                         </td>
@@ -202,17 +231,17 @@
                         <th scope="row">E. Física</th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-ef">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-ef">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-ef">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-ef">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-ef">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-ef">
                             </div>
                         </td>
                         <td></td>
@@ -230,12 +259,12 @@
                         </th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-bienal1">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal1">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-bienal1">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal1">
                             </div>
                         </td>
                         <td>
@@ -243,7 +272,7 @@
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-bienal1" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
@@ -267,12 +296,12 @@
                         </th>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-bienal2">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal2">
                             </div>
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-bienal2">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal2">
                             </div>
                         </td>
                         <td>
@@ -280,7 +309,7 @@
                         </td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control" type="number" value="0" min="0" max="200"
+                                <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-bienal2" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
@@ -308,7 +337,7 @@
                         <td></td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-op1">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-op1">
                             </div>
                         </td>
                         <td></td>
@@ -337,7 +366,7 @@
                         <td></td>
                         <td>
                             <div class="col-8">
-                                <input class="form-control notasCIF" type="number" value="0" min="0" max="20" id="nota-op2">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-op2">
                             </div>
                         </td>
                         <td></td>
@@ -376,7 +405,7 @@
                         style="color: brown; font-family: Haettenschweiler; font-size: 40px;"></span> valores!
                     <hr>
                     <b>Nota de Candidatura</b><br>
-                    <em>(Licenciatura em Engenharia Informártica - IPG)</em><br>
+                    <em>(Licenciatura em Engenharia Informática - IPG)</em><br>
                     <center><span id="notaCandidatura"
                             style="color: brown; font-family: Haettenschweiler; font-size: 40px;"></span> valores!
                     </center>
@@ -393,7 +422,7 @@
 
     <br>
     <footer style="text-align: center; background-color: rgba(160, 160, 160, 0.815); padding: 10px; margin: auto; font-family: sans-serif;">
-        <i class="fa fa-envelope fa-lg"></i> cristianop.patricio@gmail.com &nbsp; &nbsp; &nbsp; <i class="fa fa-github fa-lg"></i> github.com/CristianoPatricio &nbsp; &nbsp; &nbsp; <i class="fa fa-linkedin fa-lg"></i> Cristiano Patrício  &nbsp; | &nbsp; <b>© 2019 CP</b>  - <em>WS JavaScript @ IPG 2019</em>
+        <i class="fa fa-envelope fa-lg"></i> <a href="mailto:cristianop.patricio@gmail.com" target="_blank">cristianop.patricio@gmail.com</a> &nbsp; &nbsp; &nbsp; <i class="fa fa-github fa-lg"></i> <a href="https://github.com/CristianoPatricio" target="_blank">github.com/CristianoPatricio</a> &nbsp; &nbsp; &nbsp; <i class="fa fa-linkedin fa-lg"></i> <a href="https://www.linkedin.com/in/cristiano-p-a7284a119/" target="_blank">Cristiano Patrício</a>  &nbsp; | &nbsp; <b>© 2019 CP</b>  - <em>WS JavaScript @ IPG 2019</em>
     </footer>
 
     <script>
@@ -574,11 +603,18 @@
          * Todos os campos adquirem o estado inicial
          */
         function limpaCampos(){
-            var $inputs = document.querySelectorAll(".form-control");
+            var $inputsNotasCIF = document.querySelectorAll(".notasCIF");
 
             // Reset input numbers
-            $inputs.forEach(function(input){
-                input.value = 0;
+            $inputsNotasCIF.forEach(function(input){
+                input.value = 10;
+            });
+
+            var $inputsNotasExames = document.querySelectorAll("[id^='nota-exame]");
+
+            // Reset input numbers
+            $inputsNotasExames.forEach(function(input){
+                input.value = 100;
             });
 
             // Reset select lists
