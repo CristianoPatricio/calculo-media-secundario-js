@@ -4,26 +4,26 @@
 <head>
     <title>Calculadora Média Final Secundário</title>
     <meta charset="utf-8">
+    <!--Icon-->
+    <link rel="icon" href="./imgs/Calculator.ico">
     <!--Bootstrap-->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <!--Responsive-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta content="width" name="MobileOptimized">
-	<meta content="true" name="HandheldFriendly">
-
+    <meta content="width" name="MobileOptimized">
+    <meta content="true" name="HandheldFriendly">
 </head>
 
 <style>
-
     .title {
-        font-family:'Fredoka One', cursive;
+        font-family: 'Fredoka One', cursive;
         color: brown;
         text-align: center;
     }
@@ -70,12 +70,14 @@
     }
 
     th {
-        text-align: center !important; 
+        text-align: center !important;
         vertical-align: middle !important;
     }
 
-    .col-7, .col-9, .col-10 {
-        margin: auto; 
+    .col-7,
+    .col-9,
+    .col-10 {
+        margin: auto;
         vertical-align: middle;
     }
 
@@ -87,27 +89,27 @@
         overflow: hidden;
         margin: 0 auto;
     }
-	
+
     #logo {
         float: right;
         margin-right: 1%;
     }
 
-	#headerTitle {
+    #headerTitle {
         margin-left: 1%;
         margin-top: 1%;
         float: left;
         text-align: center;
-        vertical-align: middle; 
-	}
-
+        vertical-align: middle;
+    }
 </style>
 
 <body style="background-color: #F1FAF9;">
     <header>
         <div id="headerDiv">
             <div id="logo">
-                <a href="http://www.ipg.pt/estg/ensino_licenciatura.aspx?id=4&curso=Engenharia%20Inform%C3%A1tica" target="_blank"><img alt="Logotipo IPG" class="responsive" src="imgs/logotipo_ipg.png"/></a>
+                <a href="http://www.ipg.pt/estg/ensino_licenciatura.aspx?id=4&curso=Engenharia%20Inform%C3%A1tica"
+                    target="_blank"><img alt="Logotipo IPG" class="responsive" src="imgs/logotipo_ipg.png" /></a>
             </div>
             <div id="headerTitle">
                 <h1 class="title" style="font-size: 3.5vw;">CALCULADORA DE MÉDIA</h1>
@@ -116,7 +118,7 @@
     </header>
     <main>
         <p></p>
-        <h2 class="title" style="font-size: 2vw;">Preenche as tuas notas</h2>
+        <h2 class="title" style="font-size: 25px;">Preenche as tuas notas</h2>
         <h6 id="infoTitle">Notas da Disciplina: (Nota de 0-20)</h6><br>
         <div id="styleTable" class="table-responsive">
             <table class="table table-striped tabelaNotas">
@@ -136,17 +138,20 @@
                         <th scope="row">Português</th>
                         <td>
                             <div style="width: 130px;" class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-pt">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-pt">
                             </div>
                         </td>
                         <td>
                             <div style="width: 130px;" class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-pt">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-pt">
                             </div>
                         </td>
                         <td>
                             <div style="width: 130px;" class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-pt">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-pt">
                             </div>
                         </td>
                         <td>
@@ -160,12 +165,14 @@
                         <th scope="row">Filosofia</th>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-fil">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-fil">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-fil">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-fil">
                             </div>
                         </td>
                         <td>
@@ -177,7 +184,8 @@
                                     id="nota-exame-fil" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
-                                    <input class="form-check-input" type="checkbox" id="checkBtn1" value="option1">
+                                    <input class="form-check-input" type="checkbox" id="checkBtnFilosofia"
+                                        value="option1">
                                     Exame?
                                     </label>
                                 </div>
@@ -188,12 +196,14 @@
                         <th scope="row">L. Estrangeira</th>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-le">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-le">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-le">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-le">
                             </div>
                         </td>
                         <td>
@@ -201,11 +211,12 @@
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control" type="number" value="100" min="0" max="200" id="nota-exame-le"
-                                    readonly>
+                                <input class="form-control" type="number" value="100" min="0" max="200"
+                                    id="nota-exame-le" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
-                                    <input class="form-check-input" type="checkbox" id="checkBtn2" value="option1">
+                                    <input class="form-check-input" type="checkbox" id="checkBtnLEstrangeira"
+                                        value="option1">
                                     Exame?
                                     </label>
                                 </div>
@@ -216,17 +227,20 @@
                         <th scope="row">Matemática</th>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-mat">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-mat">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-mat">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-mat">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-mat">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-mat">
                             </div>
                         </td>
                         <td>
@@ -240,17 +254,20 @@
                         <th scope="row">E. Física</th>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-ef">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-ef">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-ef">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-ef">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-ef">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-ef">
                             </div>
                         </td>
                         <td></td>
@@ -268,12 +285,14 @@
                         </th>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal1">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-bienal1">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal1">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-bienal1">
                             </div>
                         </td>
                         <td>
@@ -285,7 +304,8 @@
                                     id="nota-exame-bienal1" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
-                                    <input class="form-check-input" type="checkbox" id="checkBtn3" value="option1">
+                                    <input class="form-check-input" type="checkbox" id="checkBtnBienal1"
+                                        value="option1">
                                     Exame?
                                     </label>
                                 </div>
@@ -305,12 +325,14 @@
                         </th>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal2">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-bienal2">
                             </div>
                         </td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-bienal2">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-bienal2">
                             </div>
                         </td>
                         <td>
@@ -322,7 +344,8 @@
                                     id="nota-exame-bienal2" readonly>
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label"></label>
-                                    <input class="form-check-input" type="checkbox" id="checkBtn4" value="option1">
+                                    <input class="form-check-input" type="checkbox" id="checkBtnBienal2"
+                                        value="option1">
                                     Exame?
                                     </label>
                                 </div>
@@ -346,7 +369,8 @@
                         <td></td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-op1">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-op1">
                             </div>
                         </td>
                         <td></td>
@@ -375,7 +399,8 @@
                         <td></td>
                         <td>
                             <div class="col-9">
-                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20" id="nota-op2">
+                                <input class="form-control notasCIF" type="number" value="10" min="0" max="20"
+                                    id="nota-op2">
                             </div>
                         </td>
                         <td></td>
@@ -386,13 +411,14 @@
     </main>
     <br>
     <div id="buttonsContent">
-        <div class="button">
-            <!--Botão-->
-            <button id="btnCalcular" type="button" class="btn btn-lg"><i class="fa fa-calculator fa-lg"></i> Calcular</button>
+        <div class="button" style="margin-bottom: 5px;">
+            <!--Botão Calcular-->
+            <button id="btnCalcular" type="button" class="btn btn-lg"><i class="fa fa-calculator fa-lg"></i>
+                Calcular</button>
         </div>
         <div class="button">
-            <!--Botão-->
-            <button id="btnLimpar" type="button" class="btn btn-lg" >
+            <!--Botão Limpar-->
+            <button id="btnLimpar" type="button" class="btn btn-lg">
                 <i class="fa fa-remove fa-lg"></i> Limpar campos</button>
         </div>
     </div>
@@ -430,17 +456,21 @@
     </div>
 
     <br>
-    <footer style="text-align: center; background-color: rgba(160, 160, 160, 0.815); padding: 10px; margin-bottom: 0px; font-family: sans-serif;">
-        <i class="fa fa-envelope fa-lg"></i> <a href="mailto:cristianop.patricio@gmail.com" target="_blank">cristianop.patricio@gmail.com</a> &nbsp; &nbsp; &nbsp; <i class="fa fa-github fa-lg"></i> <a href="https://github.com/CristianoPatricio" target="_blank">github.com/CristianoPatricio</a> &nbsp; &nbsp; &nbsp; <i class="fa fa-linkedin fa-lg"></i> <a href="https://www.linkedin.com/in/cristiano-p-a7284a119/" target="_blank">Cristiano Patrício</a>  &nbsp; | &nbsp; <b>© 2019 CP</b>  - <em>WS JavaScript @ IPG 2019</em>
+    <footer
+        style="text-align: center; background-color: rgba(160, 160, 160, 0.815); padding: 10px; margin-bottom: 0px; font-family: sans-serif;">
+        <i class="fa fa-envelope fa-lg"></i> <a href="mailto:cristianop.patricio@gmail.com"
+            target="_blank">cristianop.patricio@gmail.com</a> &nbsp; &nbsp; &nbsp; <i class="fa fa-github fa-lg"></i> <a
+            href="https://github.com/CristianoPatricio" target="_blank">github.com/CristianoPatricio</a> &nbsp; &nbsp;
+        &nbsp; <i class="fa fa-linkedin fa-lg"></i> <a href="https://www.linkedin.com/in/cristiano-p-a7284a119/"
+            target="_blank">Cristiano Patrício</a> &nbsp; | &nbsp; <b>© 2019 CP</b> - <em>WS JavaScript @ IPG 2019</em>
     </footer>
 
     <script>
-
         // Ativa ou Desativa campos 'exames'
-        showInputNumberExam("nota-exame-fil", "checkBtn1");
-        showInputNumberExam("nota-exame-le", "checkBtn2");
-        showInputNumberExam("nota-exame-bienal1", "checkBtn3");
-        showInputNumberExam("nota-exame-bienal2", "checkBtn4");
+        showInputNumberExam("nota-exame-fil", "checkBtnFilosofia");
+        showInputNumberExam("nota-exame-le", "checkBtnLEstrangeira");
+        showInputNumberExam("nota-exame-bienal1", "checkBtnBienal1");
+        showInputNumberExam("nota-exame-bienal2", "checkBtnBienal2");
 
         // Ação Botão Calcular
         var $btnCalcular = document.querySelector("#btnCalcular");
@@ -450,38 +480,39 @@
             var $spanNotaCandidatura = document.querySelector("#notaCandidatura");
             var notaMatA = document.querySelector("#nota-exame-mat").value;
 
-            if (validaCampos() === true){
+            // Se os campos estiverem validados
+            if (validados) {
                 var mediaFinal = (calcularMediaFinal()).toFixed(2);
                 var notaCandidatura = ((mediaFinal * 0.65) + ((notaMatA / 10) * 0.35)).toFixed(2);
 
                 $spanMediaFinal.textContent = mediaFinal;
                 $spanNotaCandidatura.textContent = notaCandidatura;
 
-                // Open modal with results
-                $('#myModal').modal();    
+                // Mostrar resultados no modal
+                $('#myModal').modal();
             } else {
-                // Sai da função
+                // Sair da função
                 return;
-            }          
+            }
         });
 
         // Ação Botão Limpar
         var $btnLimpar = document.querySelector("#btnLimpar");
 
-        $btnLimpar.addEventListener('click', function(){
+        $btnLimpar.addEventListener('click', function () {
             limpaCampos();
         });
 
         // Ação Input Number Fields
         var $inputNumberFields = document.querySelectorAll(".form-control");
 
-        $inputNumberFields.forEach(function(input){
-            input.addEventListener('input', function(){
+        $inputNumberFields.forEach(function (input) {
+            input.addEventListener('input', function () {
                 // Remover cor de background quando há input de dados
                 input.style.backgroundColor = "";
             });
         });
-     
+
         /**
          * @param {array} arr : array com as notas 
          * @return média
@@ -532,10 +563,10 @@
             // Inserir valor no array
             arrNotasFinais.push(parseFloat(notaFinalPT));
 
-            var notaFinalFIL = getMediaFinalDisciplina("nota-fil", "nota-exame-fil", "checkBtn1");
+            var notaFinalFIL = getMediaFinalDisciplina("nota-fil", "nota-exame-fil", "checkBtnFilosofia");
             arrNotasFinais.push(parseFloat(notaFinalFIL));
 
-            var notaFinalLE = getMediaFinalDisciplina("nota-le", "nota-exame-le", "checkBtn2");
+            var notaFinalLE = getMediaFinalDisciplina("nota-le", "nota-exame-le", "checkBtnLEstrangeira");
             arrNotasFinais.push(parseFloat(notaFinalLE));
 
             var notaFinalMAT = getMediaFinalDisciplina("nota-mat", "nota-exame-mat", 0);
@@ -544,10 +575,10 @@
             var notaFinalEF = getMediaFinalDisciplina("nota-ef", 0, 0);
             arrNotasFinais.push(parseFloat(notaFinalEF));
 
-            var notaFinalBienal1 = getMediaFinalDisciplina("nota-bienal1", "nota-exame-bienal1", "checkBtn3");
+            var notaFinalBienal1 = getMediaFinalDisciplina("nota-bienal1", "nota-exame-bienal1", "checkBtnBienal1");
             arrNotasFinais.push(parseFloat(notaFinalBienal1));
 
-            var notaFinalBienal2 = getMediaFinalDisciplina("nota-bienal2", "nota-exame-bienal2", "checkBtn4");
+            var notaFinalBienal2 = getMediaFinalDisciplina("nota-bienal2", "nota-exame-bienal2", "checkBtnBienal2");
             arrNotasFinais.push(parseFloat(notaFinalBienal2));
 
             var notaFinalOpt1 = getMediaFinalDisciplina("nota-op1", 0, 0);
@@ -567,7 +598,7 @@
          * @param inputNumberExam {string} : id do input de dados (Nota Exame)
          * @param checkBtn {string} : id do checkButton, quando existe
          * @return notaFinal
-         */ 
+         */
         function getMediaFinalDisciplina(inputNumber, inputNumberExam, checkBtn) {
             var $notas = document.querySelectorAll("#" + inputNumber);
             var notaExame = inputNumberExam !== 0 ? document.querySelector("#" + inputNumberExam).value : null;
@@ -611,18 +642,22 @@
         /**
          * Todos os campos adquirem o estado inicial
          */
-        function limpaCampos(){
+        function limpaCampos() {
             var $inputsNotasCIF = document.querySelectorAll(".notasCIF");
 
             // Reset input numbers
-            $inputsNotasCIF.forEach(function(input){
+            $inputsNotasCIF.forEach(function (input) {
                 input.value = 10;
             });
 
-            var $inputsNotasExames = document.querySelectorAll("[id^='nota-exame]");
+            var $inputsNotasExames = document.querySelectorAll("[id^='nota-exame']");
+            // The selector means: get an element where the attribute [id] begins with the string "nota-exame".
+            // ^ matches the start
+            // * matches any position
+            // $ matches the end
 
             // Reset input numbers
-            $inputsNotasExames.forEach(function(input){
+            $inputsNotasExames.forEach(function (input) {
                 input.value = 100;
             });
 
@@ -633,25 +668,15 @@
             document.querySelector("#selectListOpt2").selectedIndex = 0;
 
             // uncheck buttons
-            for (var $i = 1; $i <= 4; $i++){
-                document.querySelector("#checkBtn"+$i).checked = false;
-            }
+            document.querySelector("#checkBtnFilosofia").checked = false;
+            document.querySelector("#checkBtnLEstrangeira").checked = false;
+            document.querySelector("#checkBtnBienal1").checked = false;
+            document.querySelector("#checkBtnBienal2").checked = false;
 
-            // Reset prop readonly 
-            document.querySelector("#nota-exame-fil").readOnly = true;
-            document.querySelector("#nota-exame-le").readOnly = true;
-            document.querySelector("#nota-exame-bienal1").readOnly = true;
-            document.querySelector("#nota-exame-bienal2").readOnly = true;
-
-            // Another way to the same 
-            //var $inputsExams = document.querySelectorAll("[id^='nota-exame']");
-            //The selector means: get an element where the attribute [id] begins with the string "nota-exame".
-            // ^ matches the start
-            // * matches any position
-            // $ matches the end
-            // $inputsExams.forEach(function(input){
-            //   input.readOnly = true;
-            // });
+            // Reset property readonly 
+            $inputsNotasExames.forEach(function (input) {
+                input.readOnly = true;
+            });
         }
 
         /**
@@ -659,36 +684,46 @@
          * @return true se os campos estiverem validados
          * @return false se os campos não estiverem validados
          */
-        function validaCampos(){
-            var validados = true; 
+        var validados = true;
 
-            var notasExames = document.querySelectorAll("[id^='nota-exame']");
+        function validaCampos() {
+            var mensagemExame = false;
+            var mensagemDisc = false;
 
-            notasExames.forEach(function (nota){
-                if (nota.value < 0 || nota.value > 200){
+            var $notasExames = document.querySelectorAll("[id^='nota-exame']");
+
+            $notasExames.forEach(function (nota) {
+                if (nota.value < 0 || nota.value > 200) {
                     // definir background avermelhado
                     nota.style.backgroundColor = "rgba(165, 42, 42, 0.473)";
                     // mensagem
-                    alert("Deve inserir valores entre 0 e 200 na nota do exame nacional!");
+                    mensagemExame = true;
                     validados = false;
                 }
             });
 
-            var notasCIF = document.querySelectorAll(".notasCIF");
+            if (mensagemExame) {
+                alert("Deve inserir valores entre 0 e 200 na nota do exame nacional!");
+            }
 
-            notasCIF.forEach(function(nota){
-                if (nota.value < 0 || nota.value > 20){
+            var $notasCIF = document.querySelectorAll(".notasCIF");
+
+            $notasCIF.forEach(function (nota) {
+                if (nota.value < 0 || nota.value > 20) {
                     // definir background avermelhado
                     nota.style.backgroundColor = "rgba(165, 42, 42, 0.473)";
                     // mensagem
-                    alert("Deve inserir valores entre 0 e 20 na nota interna da disciplina!");
+                    mensagemDisc = true;
                     validados = false;
                 }
             });
+
+            if (mensagemDisc) {
+                alert("Deve inserir valores entre 0 e 20 na nota interna da disciplina!");
+            }
 
             return validados;
         }
-
     </script>
 </body>
 
