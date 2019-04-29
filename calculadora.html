@@ -668,9 +668,10 @@
             document.querySelector("#checkBtnBienal2").checked = false;
 
             // Reset property readonly 
-            $inputsNotasExames.forEach(function (input) {
-                input.readOnly = true;
-            });
+            document.querySelector("#nota-exame-fil").readOnly = true;
+            document.querySelector("#nota-exame-le").readOnly = true;
+            document.querySelector("#nota-exame-bienal1").readOnly = true;
+            document.querySelector("#nota-exame-bienal2").readOnly = true;
         }
 
         /**
