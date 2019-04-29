@@ -183,11 +183,9 @@
                                 <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-fil" readonly>
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label"></label>
                                     <input class="form-check-input" type="checkbox" id="checkBtnFilosofia"
                                         value="option1">
-                                    Exame?
-                                    </label>
+                                    <label class="form-check-label">Exame?</label>
                                 </div>
                             </div>
                         </td>
@@ -214,11 +212,9 @@
                                 <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-le" readonly>
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label"></label>
                                     <input class="form-check-input" type="checkbox" id="checkBtnLEstrangeira"
                                         value="option1">
-                                    Exame?
-                                    </label>
+                                    <label class="form-check-label">Exame?</label>
                                 </div>
                             </div>
                         </td>
@@ -303,11 +299,9 @@
                                 <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-bienal1" readonly>
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label"></label>
                                     <input class="form-check-input" type="checkbox" id="checkBtnBienal1"
                                         value="option1">
-                                    Exame?
-                                    </label>
+                                    <label class="form-check-label">Exame?</label>
                                 </div>
                             </div>
                         </td>
@@ -343,11 +337,9 @@
                                 <input class="form-control" type="number" value="100" min="0" max="200"
                                     id="nota-exame-bienal2" readonly>
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label"></label>
                                     <input class="form-check-input" type="checkbox" id="checkBtnBienal2"
                                         value="option1">
-                                    Exame?
-                                    </label>
+                                    <label class="form-check-label">Exame?</label>
                                 </div>
                             </div>
                         </td>
@@ -481,7 +473,7 @@
             var notaMatA = document.querySelector("#nota-exame-mat").value;
 
             // Se os campos estiverem validados
-            if (validados) {
+            if (validaCampos()){
                 var mediaFinal = (calcularMediaFinal()).toFixed(2);
                 var notaCandidatura = ((mediaFinal * 0.65) + ((notaMatA / 10) * 0.35)).toFixed(2);
 
@@ -648,6 +640,7 @@
             // Reset input numbers
             $inputsNotasCIF.forEach(function (input) {
                 input.value = 10;
+                input.style.backgroundColor = "";
             });
 
             var $inputsNotasExames = document.querySelectorAll("[id^='nota-exame']");
@@ -659,6 +652,7 @@
             // Reset input numbers
             $inputsNotasExames.forEach(function (input) {
                 input.value = 100;
+                input.style.backgroundColor = "";
             });
 
             // Reset select lists
@@ -684,11 +678,11 @@
          * @return true se os campos estiverem validados
          * @return false se os campos não estiverem validados
          */
-        var validados = true;
-
         function validaCampos() {
+            var validados = true;
             var mensagemExame = false;
             var mensagemDisc = false;
+            var campoNulo = false;
 
             var $notasExames = document.querySelectorAll("[id^='nota-exame']");
 
@@ -698,6 +692,12 @@
                     nota.style.backgroundColor = "rgba(165, 42, 42, 0.473)";
                     // mensagem
                     mensagemExame = true;
+                    validados = false;
+                } else if (nota.value === ""){
+                    // definir background avermelhado
+                    nota.style.backgroundColor = "rgba(165, 42, 42, 0.473)";
+                    // mensagem
+                    campoNulo = true;
                     validados = false;
                 }
             });
@@ -715,11 +715,21 @@
                     // mensagem
                     mensagemDisc = true;
                     validados = false;
+                } else if (nota.value === ""){
+                    // definir background avermelhado
+                    nota.style.backgroundColor = "rgba(165, 42, 42, 0.473)";
+                    // mensagem
+                    campoNulo = true;
+                    validados = false;
                 }
             });
 
             if (mensagemDisc) {
                 alert("Deve inserir valores entre 0 e 20 na nota interna da disciplina!");
+            }
+
+            if (campoNulo){
+                alert("Atenção! Todos os campos são de preenchimento obrigatório. Não pode haver campos vazios.");
             }
 
             return validados;
