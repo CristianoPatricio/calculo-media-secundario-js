@@ -480,8 +480,8 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info" onclick="saveResultados()"><i class="fa fa-save fa-lg"></i>Guardar</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-check fa-lg"></i>Ok</button>
+                    <button type="button" class="btn btn-info" onclick="saveResultados()"><i class="fa fa-save fa-lg"></i> Guardar</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-check fa-lg"></i> Ok</button>
                 </div>
 
             </div>
@@ -579,7 +579,9 @@
                 if (input.checked) {
                     var $inputNotaExame = document.querySelector("[id*='" + input.className.split(' ')[1] +
                         "']");
-                    piArray.push(getNotaExame($inputNotaExame.id));
+                    if ($inputNotaExame.readOnly === false) {
+                        piArray.push(getNotaExame($inputNotaExame.id));
+                    }
                 }
             });
 
@@ -768,6 +770,10 @@
                 input.style.backgroundColor = "";
             });
 
+            var $pesoPI = document.querySelector("#perc-pi");
+            $pesoPI.value = 50;
+            $pesoPI.style.backgroundColor = "";
+
             // Reset select lists
             document.querySelector("#selectListBienal1").selectedIndex = 0;
             document.querySelector("#selectListBienal2").selectedIndex = 0;
@@ -785,6 +791,13 @@
             document.querySelector("#nota-exame-le").readOnly = true;
             document.querySelector("#nota-exame-bienal1").readOnly = true;
             document.querySelector("#nota-exame-bienal2").readOnly = true;
+
+            // Uncheck PI buttuns
+            var $piInputs = document.querySelectorAll("[id*='checkBtnPI']");
+
+            $piInputs.forEach(function(input){
+                input.checked = false;
+            });
         }
 
         /**
@@ -841,14 +854,14 @@
 
             var $pesoPI = document.querySelector("#perc-pi");
 
-            if ($pesoPI.value < 0 || $pesoPI > 100) {
-                validados = false;
+            if ($pesoPI.value < 0 || $pesoPI.value > 100) {                
                 $pesoPI.style.backgroundColor = "rgba(165, 42, 42, 0.473)";
+                validados = false;
                 mensagemPesoPI = true;
             }
 
             if (mensagemPesoPI) {
-                alert("Atenção! O valor do peso das provas de ingresso deve ser entre 0 e 100.");
+                alert("Deve inserir valores entre 0 e 100 no peso das provas de ingresso.");
             }
 
             if (mensagemDisc) {
